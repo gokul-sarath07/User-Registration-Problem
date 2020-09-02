@@ -47,7 +47,7 @@ function mobile {
 
 function password {
 	read -p "Enter Password: " pass
-	if [[ ${#pass} -ge 8 ]]
+	if [[ ${#pass} -ge 8 && $pass =~ [[:upper:]] ]]
     then
         echo Yes
     else
