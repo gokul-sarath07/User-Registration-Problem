@@ -1,9 +1,8 @@
 #!/bin/bash
 echo "User Registration Problem"
-read -p "Enter a email id: " id
-shopt -s extglob
+read -p "Enter first name: " first
 regex="^[A-Z][a-z]{2,}$"
-if [[ $id =~ $regex ]]
+if [[ $first =~ $regex ]]
 then
 	echo Yes
 else
