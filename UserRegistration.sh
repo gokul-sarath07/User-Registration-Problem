@@ -45,10 +45,22 @@ function mobile {
 	fi
 }
 
+function password {
+	read -p "Enter Password: " pass
+	if [[ ${#pass} -ge 8 ]]
+    then
+        echo Yes
+    else
+        echo No
+    fi
+
+}
+
 function main {
 	firstname
 	lastname
 	validemail
 	mobile
+	password
 }
 main
