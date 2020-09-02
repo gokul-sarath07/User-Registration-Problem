@@ -34,10 +34,21 @@ function validemail {
     fi
 }
 
+function mobile {
+	read -p "Enter mobile number with code: " num
+	regex="^[0-9]{2}[: :][0-9]{10}$"
+	if [[ $num =~ $regex ]]
+	then
+		echo Yes
+	else
+		echo No
+	fi
+}
 
 function main {
 	firstname
 	lastname
 	validemail
+	mobile
 }
 main
